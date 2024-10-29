@@ -21,21 +21,21 @@ images.forEach(image => {
       const screenWidth = window.innerWidth;
       const screenHeight = window.innerHeight;
 
-      if (screenWidth < 640) { // Mobile view (small screens)
-        width = screenWidth * 0.95; // 95% of viewport width
-        height = width / aspectRatio; // Maintain aspect ratio
-      } else if (screenWidth >= 640 && screenWidth < 1024) { // Tablet view
-        width = screenWidth * 0.85; // 85% of viewport width
-        height = width / aspectRatio; // Maintain aspect ratio
-      } else { // Desktop view (large screens)
-        width = screenWidth * 0.75; // 75% of viewport width
-        height = width / aspectRatio; // Maintain aspect ratio
+      if (screenWidth < 640) { 
+        width = screenWidth * 0.95; 
+        height = width / aspectRatio; 
+      } else if (screenWidth >= 640 && screenWidth < 1024) { 
+        width = screenWidth * 0.85;
+        height = width / aspectRatio; 
+      } else { 
+        width = screenWidth * 0.75; 
+        height = width / aspectRatio; 
       }
 
       // Adjust height if it exceeds screen height
       if (height > screenHeight * 0.95) {
-        height = screenHeight * 0.95; // 95% of viewport height
-        width = height * aspectRatio; // Adjust width based on new height
+        height = screenHeight * 0.95; 
+        width = height * aspectRatio; 
       }
 
       // Set the new window to display the full image
